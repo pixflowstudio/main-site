@@ -1,0 +1,36 @@
+{
+  "name": "Pixflow Studio",
+  "tagline": "Websites that work — every single month.",
+  "description": "We build modern, fast websites for small local businesses at a simple monthly price.",
+  "email": "contact@pixflowstudio.com",
+  "phone": "+359 88 000 0000",
+  "hero": {
+    "headline": "A great website for your business",
+    "headlineAccent": "starting at €25/month",
+    "subheadline": "We design, build, and host modern websites for small local businesses. No large upfront cost. No technical hassle. Just results.",
+    "ctaPrimary": "See our plans",
+    "ctaSecondary": "Get in touch",
+    "stats": [
+      { "value": "48h", "label": "Average launch time" },
+      { "value": "100%", "label": "Mobile-first design" },
+      { "value": "€0", "label": "Upfront cost" }
+    ]
+  },
+  "nav": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "process": "How it works",
+    "contact": "Contact",
+    "cta": "Get started"
+  },
+  "footer": {
+    "copyright": "© 2025 Pixflow Studio. All rights reserved.",
+    "tagline": "Modern websites for modern businesses.",
+    "links": {
+      "services": "Services",
+      "pricing": "Pricing",
+      "process": "How it works",
+      "contact": "Contact"
+    }
+  }
+}

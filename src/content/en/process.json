@@ -1,0 +1,27 @@
+{
+  "badge": "How it works",
+  "headline": "Simple. Fast. Done.",
+  "subheadline": "From first conversation to live website in just a few days.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Discovery Call",
+      "description": "We have a quick call to understand your business, your goals, and your style preferences. No technical knowledge needed."
+    },
+    {
+      "number": "02",
+      "title": "Design & Build",
+      "description": "We design and build your website. You'll review a preview before anything goes live."
+    },
+    {
+      "number": "03",
+      "title": "Launch",
+      "description": "Your site goes live on your domain — fast, clean, and ready to impress visitors."
+    },
+    {
+      "number": "04",
+      "title": "Monthly Care",
+      "description": "We keep your site running, secure, and up to date — every single month, without you lifting a finger."
+    }
+  ]
+}

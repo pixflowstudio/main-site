@@ -1,0 +1,20 @@
+{
+  "badge": "Get in touch",
+  "headline": "Ready to get your website?",
+  "subheadline": "Send us a message and we'll get back to you within 24 hours.",
+  "form": {
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email address",
+    "businessPlaceholder": "Your business type (e.g. hair salon, restaurant...)",
+    "messagePlaceholder": "Tell us a little about your business and what you need...",
+    "submit": "Send message",
+    "sending": "Sending...",
+    "successTitle": "Message sent!",
+    "successMessage": "Thanks for reaching out. We'll be in touch within 24 hours.",
+    "errorMessage": "Something went wrong. Please try again or email us directly."
+  },
+  "directContact": "Or reach us directly:",
+  "email": "contact@pixflowstudio.com",
+  "phone": "+359 88 000 0000",
+  "responseTime": "We typically respond within a few hours."
+}

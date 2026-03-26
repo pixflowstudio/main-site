@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0B14"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Grid dots -->
+  <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.04)"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Logo mark -->
+  <rect x="80" y="80" width="64" height="64" rx="16" fill="url(#accent)"/>
+  <text x="112" y="122" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="22" fill="white" text-anchor="middle" letter-spacing="-0.5">PF</text>
+
+  <!-- Brand name -->
+  <text x="160" y="122" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="22" fill="white" dominant-baseline="central" dy="-10">Pixflow Studio</text>
+
+  <!-- Main headline -->
+  <text x="80" y="290" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="68" fill="white" letter-spacing="-2">Professional websites.</text>
+  <text x="80" y="375" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="68" fill="url(#accent)" letter-spacing="-2">Starting at €25/month.</text>
+
+  <!-- Subtext -->
+  <text x="80" y="450" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="26" fill="#94A3B8">Modern websites for small local businesses. No contracts. No upfront cost.</text>
+
+  <!-- URL -->
+  <text x="80" y="560" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="20" fill="#4F46E5">pixflowstudio.com</text>
+
+  <!-- Right side pricing pills -->
+  <rect x="900" y="260" width="220" height="50" rx="12" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+  <text x="1010" y="291" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" fill="#818CF8" text-anchor="middle">€25 / month</text>
+
+  <rect x="900" y="325" width="220" height="50" rx="12" fill="rgba(99,102,241,0.18)" stroke="rgba(99,102,241,0.4)" stroke-width="1"/>
+  <text x="1010" y="356" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" fill="#818CF8" text-anchor="middle">€30 / month</text>
+
+  <rect x="900" y="390" width="220" height="50" rx="12" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+  <text x="1010" y="421" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" fill="#818CF8" text-anchor="middle">€39 / month</text>
+</svg>

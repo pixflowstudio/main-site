@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import Services from '../components/sections/Services.astro';
+import Pricing from '../components/sections/Pricing.astro';
+import Process from '../components/sections/Process.astro';
+import Trust from '../components/sections/Trust.astro';
+import Contact from '../components/sections/Contact.astro';
+
+// Content imports
+import company from '../content/en/company.json';
+import services from '../content/en/services.json';
+import pricing from '../content/en/pricing.json';
+import process from '../content/en/process.json';
+import trust from '../content/en/trust.json';
+import contact from '../content/en/contact.json';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout
+  title="Pixflow Studio — Professional Websites from €25/month"
+  description="We design, build, and host modern websites for small local businesses. Starting at €25/month. No contracts, no upfront cost, live in 48 hours."
+  lang={lang}
+>
+  <Nav lang={lang} nav={company.nav} />
+
+  <main>
+    <Hero hero={company.hero} lang={lang} />
+    <Services services={services} />
+    <Pricing pricing={pricing} />
+    <Process process={process} />
+    <Trust trust={trust} />
+    <Contact contact={contact} lang={lang} />
+  </main>
+
+  <Footer
+    lang={lang}
+    footer={company.footer}
+    email={company.email}
+    phone={company.phone}
+  />
+</BaseLayout>

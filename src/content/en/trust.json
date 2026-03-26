@@ -1,0 +1,54 @@
+{
+  "badge": "Why Pixflow Studio",
+  "headline": "Built for real businesses. Not agencies.",
+  "subheadline": "We cut the fluff and focus on what actually matters — a great website at a fair monthly price.",
+  "features": [
+    {
+      "icon": "contract",
+      "title": "No contracts",
+      "description": "Month-to-month. Cancel anytime, no questions asked."
+    },
+    {
+      "icon": "money",
+      "title": "No large upfront cost",
+      "description": "Start your professional website without spending thousands upfront."
+    },
+    {
+      "icon": "rocket",
+      "title": "Live in days, not months",
+      "description": "Most websites go live within 48–72 hours of content approval."
+    },
+    {
+      "icon": "transparent",
+      "title": "Transparent pricing",
+      "description": "One flat monthly price. No hidden fees. No surprises."
+    },
+    {
+      "icon": "mobile",
+      "title": "Always mobile-first",
+      "description": "Every website works beautifully on phones — where most visitors come from."
+    },
+    {
+      "icon": "support",
+      "title": "Real human support",
+      "description": "You talk to the person who built your site. No support tickets or chatbots."
+    }
+  ],
+  "testimonials": [
+    {
+      "text": "I had my website live in two days. The whole process was effortless.",
+      "author": "Maria K.",
+      "business": "Flower Shop, Sofia"
+    },
+    {
+      "text": "Finally a web service that's affordable and actually looks professional.",
+      "author": "Georgi T.",
+      "business": "Barber Studio, Plovdiv"
+    },
+    {
+      "text": "My clients always compliment my website. Best investment I've made.",
+      "author": "Elena M.",
+      "business": "Yoga Studio, Varna"
+    }
+  ]
+}

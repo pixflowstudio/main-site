@@ -1,0 +1,65 @@
+---
+interface ServiceItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface ServicesContent {
+  badge: string;
+  headline: string;
+  subheadline: string;
+  items: ServiceItem[];
+}
+
+export interface Props {
+  services: ServicesContent;
+}
+
+const { services } = Astro.props;
+
+const icons: Record<string, string> = {
+  design: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`,
+  hosting: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>`,
+  mobile: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>`,
+  seo: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>`,
+  fast: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+  support: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+};
+---
+
+<section id="services" class="relative py-24 sm:py-32" aria-labelledby="services-headline">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="text-center mb-16 sm:mb-20">
+      <p class="section-badge justify-center mb-4">{services.badge}</p>
+      <h2 id="services-headline" class="section-headline mb-5">{services.headline}</h2>
+      <p class="section-subheadline mx-auto">{services.subheadline}</p>
+    </div>
+
+    <!-- Services grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+      {services.items.map((item, index) => (
+        <div
+          class="card card-hover group"
+          style={`animation-delay: ${index * 80}ms`}
+        >
+          <!-- Icon -->
+          <div class="w-11 h-11 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand-light mb-5 group-hover:bg-brand/15 group-hover:border-brand/30 transition-all duration-300">
+            <Fragment set:html={icons[item.icon] || icons.support} />
+          </div>
+
+          <!-- Text -->
+          <h3 class="text-white font-semibold text-base mb-2 leading-snug">
+            {item.title}
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

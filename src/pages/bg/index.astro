@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/layout/Nav.astro';
+import Footer from '../../components/layout/Footer.astro';
+import Hero from '../../components/sections/Hero.astro';
+import Services from '../../components/sections/Services.astro';
+import Pricing from '../../components/sections/Pricing.astro';
+import Process from '../../components/sections/Process.astro';
+import Trust from '../../components/sections/Trust.astro';
+import Contact from '../../components/sections/Contact.astro';
+
+// Content imports
+import company from '../../content/bg/company.json';
+import services from '../../content/bg/services.json';
+import pricing from '../../content/bg/pricing.json';
+import process from '../../content/bg/process.json';
+import trust from '../../content/bg/trust.json';
+import contact from '../../content/bg/contact.json';
+
+const lang = 'bg' as const;
+---
+
+<BaseLayout
+  title="Pixflow Studio — Професионални уебсайтове от 25€/месец"
+  description="Проектираме, изграждаме и хостваме модерни уебсайтове за малки местни бизнеси. От 25€ на месец. Без договори, без начална инвестиция, онлайн за 48 часа."
+  lang={lang}
+>
+  <Nav lang={lang} nav={company.nav} />
+
+  <main>
+    <Hero hero={company.hero} lang={lang} />
+    <Services services={services} />
+    <Pricing pricing={pricing} />
+    <Process process={process} />
+    <Trust trust={trust} />
+    <Contact contact={contact} lang={lang} />
+  </main>
+
+  <Footer
+    lang={lang}
+    footer={company.footer}
+    email={company.email}
+    phone={company.phone}
+  />
+</BaseLayout>

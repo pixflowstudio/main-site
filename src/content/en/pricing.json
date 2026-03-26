@@ -1,0 +1,61 @@
+{
+  "badge": "Simple pricing",
+  "headline": "One price. No surprises.",
+  "subheadline": "Pick the plan that fits your business. No contracts — cancel anytime.",
+  "plans": [
+    {
+      "name": "Starter",
+      "price": "25",
+      "currency": "€",
+      "period": "month",
+      "description": "Perfect for businesses that just need a solid, professional online presence.",
+      "featured": false,
+      "badge": null,
+      "cta": "Get started",
+      "features": [
+        "Custom website design",
+        "Hosting included",
+        "SSL certificate",
+        "Mobile-friendly",
+        "SEO-ready structure",
+        "Up to 5 pages"
+      ]
+    },
+    {
+      "name": "Growth",
+      "price": "30",
+      "currency": "€",
+      "period": "month",
+      "description": "Ideal for active businesses that need small updates from time to time.",
+      "featured": true,
+      "badge": "Most Popular",
+      "cta": "Get started",
+      "features": [
+        "Everything in Starter",
+        "Small content updates",
+        "Text & image changes",
+        "Priority email support",
+        "Up to 7 pages"
+      ]
+    },
+    {
+      "name": "Priority",
+      "price": "39",
+      "currency": "€",
+      "period": "month",
+      "description": "For businesses that want fast, responsive updates and priority care every month.",
+      "featured": false,
+      "badge": null,
+      "cta": "Get started",
+      "features": [
+        "Everything in Growth",
+        "Up to 1hr of updates/month",
+        "Priority turnaround",
+        "Up to 10 pages",
+        "Performance monitoring",
+        "Monthly check-in"
+      ]
+    }
+  ],
+  "note": "All plans include a one-time website setup. Your site goes live within 48–72 hours of content approval."
+}

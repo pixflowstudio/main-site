@@ -1,0 +1,66 @@
+---
+interface ProcessStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+interface ProcessContent {
+  badge: string;
+  headline: string;
+  subheadline: string;
+  steps: ProcessStep[];
+}
+
+export interface Props {
+  process: ProcessContent;
+}
+
+const { process } = Astro.props;
+---
+
+<section id="process" class="relative py-24 sm:py-32" aria-labelledby="process-headline">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="text-center mb-16 sm:mb-20">
+      <p class="section-badge justify-center mb-4">{process.badge}</p>
+      <h2 id="process-headline" class="section-headline mb-5">{process.headline}</h2>
+      <p class="section-subheadline mx-auto">{process.subheadline}</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+      {process.steps.map((step, index) => (
+        <div class="relative group">
+          <!-- Connector line (desktop) -->
+          {index < process.steps.length - 1 && (
+            <div
+              class="hidden lg:block absolute top-6 left-[calc(100%+12px)] right-0 w-6 h-px bg-white/[0.08] z-10"
+              aria-hidden="true"
+            ></div>
+          )}
+
+          <div class="card card-hover h-full">
+            <!-- Step number -->
+            <div class="flex items-center gap-3 mb-5">
+              <span class="text-xs font-black text-brand-light tracking-[0.15em] font-mono">
+                {step.number}
+              </span>
+              <div class="flex-1 h-px bg-white/[0.06]"></div>
+            </div>
+
+            <!-- Content -->
+            <h3 class="text-white font-semibold text-base mb-2.5 leading-snug">
+              {step.title}
+            </h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

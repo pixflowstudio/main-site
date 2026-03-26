@@ -1,0 +1,37 @@
+{
+  "badge": "What you get",
+  "headline": "Everything your business needs online",
+  "subheadline": "One simple subscription covers everything — from design to hosting.",
+  "items": [
+    {
+      "icon": "design",
+      "title": "Custom Website Design",
+      "description": "A unique, modern website designed specifically for your business and brand identity."
+    },
+    {
+      "icon": "hosting",
+      "title": "Hosting Included",
+      "description": "Your site lives on fast, reliable infrastructure. No extra costs, no server management."
+    },
+    {
+      "icon": "mobile",
+      "title": "Mobile-First",
+      "description": "Your website looks perfect on every device — phone, tablet, or desktop."
+    },
+    {
+      "icon": "seo",
+      "title": "SEO-Ready",
+      "description": "Built with proper structure so search engines can find your business from day one."
+    },
+    {
+      "icon": "fast",
+      "title": "Lightning Fast",
+      "description": "Optimized for speed. Fast websites rank better and convert more visitors into customers."
+    },
+    {
+      "icon": "support",
+      "title": "Ongoing Support",
+      "description": "We keep your site secure and running. Updates included in Growth and Priority plans."
+    }
+  ]
+}

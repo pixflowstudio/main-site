@@ -1,0 +1,133 @@
+---
+interface FooterContent {
+  copyright: string;
+  tagline: string;
+  links: {
+    services: string;
+    pricing: string;
+    process: string;
+    contact: string;
+  };
+}
+
+export interface Props {
+  lang: 'en' | 'bg';
+  footer: FooterContent;
+  email: string;
+  phone: string;
+}
+
+const { lang, footer, email, phone } = Astro.props;
+const homeUrl = lang === 'en' ? '/' : '/bg/';
+const alternateUrl = lang === 'en' ? '/bg/' : '/';
+const alternateLang = lang === 'en' ? 'BG' : 'EN';
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="relative border-t border-white/[0.06] bg-[#080910]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+      <!-- Brand column -->
+      <div class="sm:col-span-2 lg:col-span-2">
+        <a href={homeUrl} class="flex items-center gap-2.5 group mb-4 w-fit">
+          <div class="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center text-white font-black text-xs">
+            PF
+          </div>
+          <span class="font-bold text-white text-sm tracking-tight">
+            Pixflow<span class="text-brand-light"> Studio</span>
+          </span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
+          {footer.tagline}
+        </p>
+        <div class="mt-6 space-y-2">
+          <a
+            href={`mailto:${email}`}
+            class="flex items-center gap-2 text-slate-400 hover:text-white text-sm transition-colors duration-150 group w-fit"
+          >
+            <svg class="text-brand-light flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            {email}
+          </a>
+          <a
+            href={`tel:${phone.replace(/\s/g, '')}`}
+            class="flex items-center gap-2 text-slate-400 hover:text-white text-sm transition-colors duration-150 w-fit"
+          >
+            <svg class="text-brand-light flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z"/>
+            </svg>
+            {phone}
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation links -->
+      <div>
+        <h3 class="text-white text-xs font-semibold uppercase tracking-widest mb-5">
+          {lang === 'en' ? 'Navigation' : 'Навигация'}
+        </h3>
+        <ul class="space-y-3" role="list">
+          <li>
+            <a href="#services" class="text-slate-400 hover:text-white text-sm transition-colors duration-150">
+              {footer.links.services}
+            </a>
+          </li>
+          <li>
+            <a href="#pricing" class="text-slate-400 hover:text-white text-sm transition-colors duration-150">
+              {footer.links.pricing}
+            </a>
+          </li>
+          <li>
+            <a href="#process" class="text-slate-400 hover:text-white text-sm transition-colors duration-150">
+              {footer.links.process}
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="text-slate-400 hover:text-white text-sm transition-colors duration-150">
+              {footer.links.contact}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Language & legal -->
+      <div>
+        <h3 class="text-white text-xs font-semibold uppercase tracking-widest mb-5">
+          {lang === 'en' ? 'Language' : 'Език'}
+        </h3>
+        <ul class="space-y-3" role="list">
+          <li>
+            <a
+              href="/"
+              class={`text-sm transition-colors duration-150 ${lang === 'en' ? 'text-brand-light font-medium' : 'text-slate-400 hover:text-white'}`}
+              aria-current={lang === 'en' ? 'page' : undefined}
+            >
+              English
+            </a>
+          </li>
+          <li>
+            <a
+              href="/bg/"
+              class={`text-sm transition-colors duration-150 ${lang === 'bg' ? 'text-brand-light font-medium' : 'text-slate-400 hover:text-white'}`}
+              aria-current={lang === 'bg' ? 'page' : undefined}
+            >
+              Български
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-16 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-slate-600 text-xs">
+        {footer.copyright.replace('2025', String(currentYear))}
+      </p>
+      <p class="text-slate-700 text-xs">
+        {lang === 'en' ? 'Designed & built with ♥ in Bulgaria' : 'Проектирано и изградено с ♥ в България'}
+      </p>
+    </div>
+  </div>
+</footer>
