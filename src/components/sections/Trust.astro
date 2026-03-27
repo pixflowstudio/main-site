@@ -11,10 +11,17 @@ interface Testimonial {
   business: string;
 }
 
+interface AboutHighlight {
+  icon: string;
+  value: string;
+  label: string;
+}
+
 interface TrustContent {
   badge: string;
   headline: string;
   subheadline: string;
+  about: { highlights: AboutHighlight[] };
   features: TrustFeature[];
   testimonials: Testimonial[];
 }
@@ -43,6 +50,16 @@ const icons: Record<string, string> = {
       <p class="section-badge justify-center mb-4">{trust.badge}</p>
       <h2 id="trust-headline" class="section-headline mb-5">{trust.headline}</h2>
       <p class="section-subheadline mx-auto">{trust.subheadline}</p>
+    </div>
+
+    <!-- Experience highlights -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+      {trust.about.highlights.map((h) => (
+        <div class="card text-center py-7">
+          <div class="text-2xl font-black text-white mb-1">{h.value}</div>
+          <div class="text-slate-500 text-sm">{h.label}</div>
+        </div>
+      ))}
     </div>
 
     <!-- Features grid -->

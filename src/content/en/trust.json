@@ -1,7 +1,14 @@
 {
   "badge": "Why Pixflow Studio",
-  "headline": "Built for real businesses. Not agencies.",
-  "subheadline": "We cut the fluff and focus on what actually matters — a great website at a fair monthly price.",
+  "headline": "Built by someone who gets both design and business.",
+  "subheadline": "With nearly a decade of hands-on UI/UX experience and a strong understanding of how businesses work, every website I build is intentional — designed to look great and actually deliver results.",
+  "about": {
+    "highlights": [
+      { "icon": "years", "value": "10 years", "label": "UI/UX development experience" },
+      { "icon": "detail", "value": "Pixel-perfect", "label": "Attention to every detail" },
+      { "icon": "business", "value": "Business-first", "label": "Built to convert, not just impress" }
+    ]
+  },
   "features": [
     {
       "icon": "contract",

@@ -5,7 +5,7 @@
   "plans": [
     {
       "name": "Starter",
-      "price": "25",
+      "price": "19.99",
       "currency": "€",
       "period": "month",
       "description": "Perfect for businesses that just need a solid, professional online presence.",
@@ -23,7 +23,7 @@
     },
     {
       "name": "Growth",
-      "price": "30",
+      "price": "29.99",
       "currency": "€",
       "period": "month",
       "description": "Ideal for active businesses that need small updates from time to time.",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Priority",
-      "price": "39",
+      "price": "39.99",
       "currency": "€",
       "period": "month",
       "description": "For businesses that want fast, responsive updates and priority care every month.",
