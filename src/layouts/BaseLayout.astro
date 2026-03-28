@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/common/CookieBanner.astro';
 
 export interface Props {
   title: string;
@@ -79,5 +80,6 @@ const alternateLang = lang === 'en' ? 'bg' : 'en';
 </head>
 <body class="bg-[#0A0B14] text-slate-100 antialiased font-sans">
   <slot />
+  <CookieBanner lang={lang} />
 </body>
 </html>

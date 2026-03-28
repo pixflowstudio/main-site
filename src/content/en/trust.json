@@ -1,7 +1,7 @@
 {
   "badge": "Why Pixflow Studio",
-  "headline": "Built by someone who gets both design and business.",
-  "subheadline": "With nearly a decade of hands-on UI/UX experience and a strong understanding of how businesses work, every website I build is intentional — designed to look great and actually deliver results.",
+  "headline": "A team that gets both design and business.",
+  "subheadline": "With nearly a decade of hands-on UI/UX experience and a strong understanding of how businesses work, every website we build is intentional — designed to look great and actually deliver results.",
   "about": {
     "highlights": [
       { "icon": "years", "value": "10 years", "label": "UI/UX development experience" },
@@ -38,7 +38,7 @@
     {
       "icon": "support",
       "title": "Real human support",
-      "description": "You talk to the person who built your site. No support tickets or chatbots."
+      "description": "You talk directly to our team — the people who built your site. No support tickets or chatbots."
     }
   ],
   "testimonials": [

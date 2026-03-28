@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+
+import companyEn from '../content/en/company.json';
+import companyBg from '../content/bg/company.json';
+
+export interface Props {
+  title: string;
+  description: string;
+  lang: 'en' | 'bg';
+}
+
+const { title, description, lang } = Astro.props;
+const company = lang === 'en' ? companyEn : companyBg;
+---
+
+<BaseLayout title={title} description={description} lang={lang}>
+  <Nav lang={lang} nav={company.nav} />
+  <main class="pt-24 sm:pt-28 pb-24 sm:pb-32 min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <slot />
+    </div>
+  </main>
+  <Footer
+    lang={lang}
+    footer={company.footer}
+    email={company.email}
+    whatsapp={company.whatsapp}
+  />
+</BaseLayout>

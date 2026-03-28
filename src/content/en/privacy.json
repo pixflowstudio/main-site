@@ -1,0 +1,83 @@
+{
+  "title": "Privacy Policy",
+  "subtitle": "We take your privacy seriously. Here is exactly what data we collect, why, and how it is handled.",
+  "lastUpdated": "March 2026",
+  "controller": {
+    "title": "Who We Are",
+    "body": "Pixflow Studio is a web design subscription service operated as a sole trader. We are the data controller for any personal data you submit through this website.",
+    "contact": "contact@pixflowstudio.com"
+  },
+  "sections": [
+    {
+      "title": "What Data We Collect",
+      "items": [
+        {
+          "heading": "Contact form submissions",
+          "body": "When you fill out the contact form on this website, we collect your name, email address, business type, and the message you write. This data is submitted to Formspree (our form processing service) and forwarded to our email inbox. We use it solely to respond to your enquiry."
+        },
+        {
+          "heading": "Website access logs",
+          "body": "Cloudflare, our hosting provider, automatically processes your IP address and browser information to serve the website. This is standard infrastructure data and is governed by Cloudflare's own privacy policy."
+        },
+        {
+          "heading": "Google Fonts",
+          "body": "This website loads fonts from Google Fonts, which means your browser makes a request to Google's servers. Google may log your IP address as part of this request. No cookies are set. You can read Google's privacy policy for full details."
+        }
+      ]
+    },
+    {
+      "title": "Legal Basis for Processing",
+      "body": "We process contact form data on the basis of legitimate interest — specifically, to respond to enquiries you have chosen to send us. We do not process your data for any other purpose without your explicit consent."
+    },
+    {
+      "title": "How Long We Keep Your Data",
+      "body": "Contact form submissions are kept in our email inbox for as long as necessary to handle your enquiry and any follow-up communication. If you become a client, relevant communication may be kept for up to 3 years for business record purposes. You can request deletion at any time."
+    },
+    {
+      "title": "Third-Party Services",
+      "items": [
+        {
+          "heading": "Formspree",
+          "body": "Our contact form is processed by Formspree Inc. Your submission data passes through their servers and is forwarded to us by email. Formspree is GDPR compliant. See formspree.io/legal/privacy-policy for details."
+        },
+        {
+          "heading": "Cloudflare Pages",
+          "body": "This website is hosted on Cloudflare Pages. Cloudflare processes network traffic data to serve the site and provide security. See cloudflare.com/privacypolicy for details."
+        },
+        {
+          "heading": "Google Fonts",
+          "body": "Fonts are loaded from Google Fonts CDN. Google may process your IP address when your browser requests the font files. See policies.google.com/privacy for details."
+        }
+      ]
+    },
+    {
+      "title": "Cookies",
+      "body": "This website does not use tracking cookies, advertising cookies, or analytics cookies. The only cookie-like storage used is a small item saved in your browser's localStorage to remember that you have dismissed the cookie notice. This item contains no personal data and is never sent to any server."
+    },
+    {
+      "title": "Your Rights Under GDPR",
+      "body": "If you are in the European Union or European Economic Area, you have the following rights regarding your personal data:",
+      "rights": [
+        "Right of access — you can ask us what data we hold about you",
+        "Right to rectification — you can ask us to correct inaccurate data",
+        "Right to erasure — you can ask us to delete your data",
+        "Right to restrict processing — you can ask us to stop using your data",
+        "Right to data portability — you can ask for a copy of your data",
+        "Right to object — you can object to our processing of your data"
+      ],
+      "footer": "To exercise any of these rights, email us at contact@pixflowstudio.com. We will respond within 30 days."
+    },
+    {
+      "title": "Data Security",
+      "body": "We take reasonable steps to protect your data. Contact form submissions are transmitted over encrypted connections (HTTPS). Our email inbox is protected by two-factor authentication. We do not store contact form data in any database — it exists only in our email inbox."
+    },
+    {
+      "title": "Changes to This Policy",
+      "body": "If we make significant changes to this policy, we will update the date at the top of this page. We recommend checking back occasionally if you use our services."
+    },
+    {
+      "title": "Contact",
+      "body": "For any privacy-related questions or data requests, contact us at contact@pixflowstudio.com. We aim to respond within 2 business days."
+    }
+  ]
+}

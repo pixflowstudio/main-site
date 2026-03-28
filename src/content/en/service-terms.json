@@ -1,0 +1,102 @@
+{
+  "title": "What's Included",
+  "subtitle": "A clear breakdown of every plan — what you get, what counts as extra, and how requests work.",
+  "plans": [
+    {
+      "name": "Starter — €24.99/month",
+      "color": "default",
+      "includes": [
+        "Custom website design built specifically for your business",
+        "Hosting on fast, reliable infrastructure",
+        "SSL certificate (https://)",
+        "Mobile-responsive design for all screen sizes",
+        "SEO-ready page structure (titles, meta descriptions, headings)",
+        "Up to 5 pages (e.g. Home, About, Services, Menu, Contact)",
+        "Contact form connected to your email",
+        "Initial setup and launch within 48–72 hours of content approval"
+      ],
+      "excludes": [
+        "Content updates of any kind after launch",
+        "Adding new pages or sections",
+        "Design changes after approval"
+      ],
+      "note": "This plan is designed for businesses that are happy with their site and only need it live and hosted. Any change after launch requires upgrading or paying for extra work."
+    },
+    {
+      "name": "Growth — €34.99/month",
+      "color": "featured",
+      "includes": [
+        "Everything in Starter",
+        "Small content updates (see definition below)",
+        "Text and image changes (see definition below)",
+        "Priority email support — response within 1 business day",
+        "Up to 7 pages"
+      ],
+      "excludes": [
+        "Adding entirely new pages or sections",
+        "Structural or layout redesigns",
+        "New functionality (booking systems, galleries, forms, etc.)",
+        "Writing or creating content from scratch",
+        "Graphic design or image editing"
+      ],
+      "note": "This plan covers ongoing maintenance and minor updates to keep your site fresh. It does not cover development work."
+    },
+    {
+      "name": "Priority — €49.99/month",
+      "color": "default",
+      "includes": [
+        "Everything in Growth",
+        "Up to 1 hour of development work per month",
+        "Priority turnaround — updates handled within 1 business day",
+        "Up to 10 pages",
+        "Monthly performance check"
+      ],
+      "excludes": [
+        "Unused hours do not roll over to the next month",
+        "Hours beyond 1hr/month are billed separately (quoted per request)",
+        "Graphic design, branding, or logo work",
+        "Third-party integrations requiring paid APIs"
+      ],
+      "note": "The 1 hour is tracked. You will be notified before any billable overrun. Larger projects are quoted separately."
+    }
+  ],
+  "definitions": {
+    "title": "What Each Term Means",
+    "items": [
+      {
+        "term": "Small content update",
+        "definition": "A minor change to existing content that does not affect the design or structure of the page. This includes: correcting a typo, updating a sentence or paragraph, changing a phone number or address, updating opening hours, swapping one image for another of the same size.",
+        "notIncluded": "Adding new sections, rewriting entire pages, changing fonts or colours, adding new functionality."
+      },
+      {
+        "term": "Text & image changes",
+        "definition": "Replacing existing text with new text, or swapping an existing image with a new one you provide. The new content goes in the same place — no layout changes involved.",
+        "notIncluded": "Creating or editing images, writing copy, repositioning elements, adding new blocks of content."
+      },
+      {
+        "term": "Priority email support",
+        "definition": "Your email is answered within 1 business day (Monday–Friday). Standard plan support is answered within 2–3 business days.",
+        "notIncluded": "Phone support, instant response, or 24/7 availability."
+      },
+      {
+        "term": "Up to 1 hour of updates/month",
+        "definition": "One tracked hour of development work every calendar month. This can be used for tasks like: adding a new section, restructuring a page, adding a simple new page, or any small development task. Time is logged and shared with you on request.",
+        "notIncluded": "Hours do not accumulate or roll over. Work beyond 1hr is quoted and billed separately."
+      }
+    ]
+  },
+  "extras": {
+    "title": "Extra Work",
+    "body": "Anything outside your plan is available as extra work. This includes adding new pages, designing new sections, building new functionality, or any task that exceeds your monthly hours. Extra work is always quoted and agreed upon before any work begins — you will never be charged a surprise fee.",
+    "cta": "Get in touch to discuss your needs and we will give you a clear quote."
+  },
+  "fair_use": {
+    "title": "Fair Use",
+    "body": "Plans are designed for one website per subscription. Each subscription covers a single business domain. Using one subscription to maintain multiple websites is not permitted."
+  },
+  "contact": {
+    "title": "Questions?",
+    "body": "If you are unsure whether something is included in your plan before submitting a request, just ask. We will always tell you honestly whether it is covered or requires extra work.",
+    "email": "contact@pixflowstudio.com"
+  }
+}

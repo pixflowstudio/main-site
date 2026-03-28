@@ -1,0 +1,93 @@
+---
+import InnerLayout from '../layouts/InnerLayout.astro';
+import content from '../content/en/service-terms.json';
+---
+
+<InnerLayout
+  title="What's Included — Pixflow Studio Plan Details"
+  description="A clear breakdown of every Pixflow Studio plan — what's included, what counts as extra, and how requests work."
+  lang="en"
+>
+  <!-- Page header -->
+  <div class="mb-12 pb-10 border-b border-white/[0.06]">
+    <a href="/" class="inline-flex items-center gap-2 text-slate-500 hover:text-white text-sm mb-8 transition-colors">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to home
+    </a>
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-4 tracking-tight">{content.title}</h1>
+    <p class="text-slate-400 text-lg leading-relaxed">{content.subtitle}</p>
+  </div>
+
+  <!-- Plans -->
+  <div class="space-y-8 mb-16">
+    {content.plans.map((plan) => (
+      <div class:list={['rounded-2xl p-6 sm:p-8 border', plan.color === 'featured' ? 'bg-brand/10 border-brand/30' : 'bg-white/[0.03] border-white/[0.06]']}>
+        <h2 class:list={['text-lg font-bold mb-6', plan.color === 'featured' ? 'text-brand-light' : 'text-white']}>{plan.name}</h2>
+
+        <div class="grid sm:grid-cols-2 gap-6 mb-5">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Included</p>
+            <ul class="space-y-2">
+              {plan.includes.map((item) => (
+                <li class="flex items-start gap-2.5 text-sm text-slate-300">
+                  <svg class="text-green-400 flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Not included</p>
+            <ul class="space-y-2">
+              {plan.excludes.map((item) => (
+                <li class="flex items-start gap-2.5 text-sm text-slate-500">
+                  <svg class="text-slate-600 flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-slate-500 text-sm leading-relaxed pt-5 border-t border-white/[0.05] italic">{plan.note}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Definitions -->
+  <div class="mb-16">
+    <h2 class="text-2xl font-bold text-white mb-8">{content.definitions.title}</h2>
+    <div class="space-y-5">
+      {content.definitions.items.map((def) => (
+        <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-3">"{def.term}"</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">{def.definition}</p>
+          <div class="pt-4 border-t border-white/[0.05]">
+            <p class="text-xs font-semibold uppercase tracking-widest text-slate-600 mb-1.5">Does not include</p>
+            <p class="text-slate-500 text-sm leading-relaxed">{def.notIncluded}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Extra work -->
+  <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 sm:p-8 mb-8">
+    <h2 class="text-xl font-bold text-white mb-3">{content.extras.title}</h2>
+    <p class="text-slate-400 text-sm leading-relaxed mb-4">{content.extras.body}</p>
+    <p class="text-slate-500 text-sm italic">{content.extras.cta}</p>
+  </div>
+
+  <!-- Fair use -->
+  <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 sm:p-8 mb-8">
+    <h2 class="text-xl font-bold text-white mb-3">{content.fair_use.title}</h2>
+    <p class="text-slate-400 text-sm leading-relaxed">{content.fair_use.body}</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="bg-brand/10 border border-brand/20 rounded-xl p-6 sm:p-8">
+    <h2 class="text-xl font-bold text-white mb-3">{content.contact.title}</h2>
+    <p class="text-slate-400 text-sm leading-relaxed mb-4">{content.contact.body}</p>
+    <a href={`mailto:${content.contact.email}`} class="text-brand-light text-sm font-medium hover:text-white transition-colors">{content.contact.email}</a>
+  </div>
+</InnerLayout>

@@ -120,6 +120,31 @@ const currentYear = new Date().getFullYear();
           </li>
         </ul>
       </div>
+
+      <!-- Legal links -->
+      <div>
+        <h3 class="text-white text-xs font-semibold uppercase tracking-widest mb-5">
+          {lang === 'en' ? 'Legal' : 'Правно'}
+        </h3>
+        <ul class="space-y-3" role="list">
+          <li>
+            <a
+              href={lang === 'en' ? '/service-terms/' : '/bg/service-terms/'}
+              class="text-slate-400 hover:text-white text-sm transition-colors duration-150"
+            >
+              {lang === 'en' ? "What's Included" : 'Какво е включено'}
+            </a>
+          </li>
+          <li>
+            <a
+              href={lang === 'en' ? '/privacy/' : '/bg/privacy/'}
+              class="text-slate-400 hover:text-white text-sm transition-colors duration-150"
+            >
+              {lang === 'en' ? 'Privacy Policy' : 'Поверителност'}
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- Bottom bar -->

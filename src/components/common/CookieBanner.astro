@@ -1,0 +1,79 @@
+---
+export interface Props {
+  lang: 'en' | 'bg';
+}
+
+const { lang } = Astro.props;
+
+const text = {
+  en: {
+    message: 'This site uses no tracking or advertising cookies. We use Google Fonts and Cloudflare for performance. Contact form data is processed by Formspree.',
+    learnMore: 'Privacy Policy',
+    accept: 'Got it',
+  },
+  bg: {
+    message: 'Този сайт не използва проследяващи или рекламни бисквитки. Използваме Google Fonts и Cloudflare за производителност. Данните от формата за контакт се обработват от Formspree.',
+    learnMore: 'Политика за поверителност',
+    accept: 'Разбрах',
+  },
+};
+
+const t = text[lang];
+const privacyUrl = lang === 'en' ? '/privacy/' : '/bg/privacy/';
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-5"
+  role="dialog"
+  aria-label="Cookie notice"
+  aria-live="polite"
+>
+  <div class="max-w-4xl mx-auto bg-[#131520] border border-white/[0.1] rounded-2xl shadow-2xl shadow-black/40 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <!-- Icon -->
+    <div class="w-9 h-9 rounded-lg bg-brand/10 border border-brand/20 flex items-center justify-center flex-shrink-0 text-brand-light">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    </div>
+
+    <!-- Text -->
+    <p class="text-slate-400 text-sm leading-relaxed flex-1">
+      {t.message}
+      {' '}
+      <a href={privacyUrl} class="text-brand-light hover:text-white underline underline-offset-2 transition-colors">
+        {t.learnMore}
+      </a>
+    </p>
+
+    <!-- Accept button -->
+    <button
+      id="cookie-accept"
+      class="flex-shrink-0 bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors duration-200 whitespace-nowrap"
+    >
+      {t.accept}
+    </button>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+
+  // Hide if already accepted
+  if (localStorage.getItem('cookie-notice-dismissed') === '1') {
+    banner?.remove();
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookie-notice-dismissed', '1');
+    banner?.classList.add('opacity-0', 'translate-y-2', 'pointer-events-none');
+    setTimeout(() => banner?.remove(), 300);
+  });
+</script>
+
+<style>
+  #cookie-banner {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+</style>
