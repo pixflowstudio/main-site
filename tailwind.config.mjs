@@ -5,10 +5,10 @@ export default {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#F59E0B',
-          light: '#FCD34D',
-          dark: '#D97706',
-          glow: 'rgba(245,158,11,0.15)',
+          DEFAULT: '#10B981',
+          light: '#34D399',
+          dark: '#059669',
+          glow: 'rgba(16,185,129,0.15)',
         },
       },
       screens: {
@@ -18,7 +18,7 @@ export default {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-brand': 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+        'gradient-brand': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
         'gradient-hero': 'radial-gradient(ellipse 80% 50% at 50% -10%, rgba(245,158,11,0.18) 0%, transparent 70%)',
         'gradient-card': 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%)',
         'dot-pattern': 'radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px)',
