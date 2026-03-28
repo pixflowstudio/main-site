@@ -31,9 +31,7 @@ export interface Props {
 const { contact, lang } = Astro.props;
 ---
 
-<section id="contact" class="relative py-24 sm:py-32" aria-labelledby="contact-headline">
-  <!-- Background gradient -->
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand/[0.04] to-transparent pointer-events-none" aria-hidden="true"></div>
+<section id="contact" class="relative py-24 sm:py-32 bg-[#0E0F1A]" aria-labelledby="contact-headline">
 
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -54,7 +52,7 @@ const { contact, lang } = Astro.props;
             href={`mailto:${contact.email}`}
             class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-150 group"
           >
-            <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand-light flex-shrink-0 group-hover:bg-brand/15 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate-300 flex-shrink-0 group-hover:bg-white/[0.08] transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
               </svg>

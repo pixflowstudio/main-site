@@ -28,7 +28,7 @@ const icons: Record<string, string> = {
 };
 ---
 
-<section id="services" class="relative py-24 sm:py-32" aria-labelledby="services-headline">
+<section id="services" class="relative py-24 sm:py-32 bg-[#0E0F1A]" aria-labelledby="services-headline">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Section header -->
@@ -46,7 +46,7 @@ const icons: Record<string, string> = {
           style={`animation-delay: ${index * 80}ms`}
         >
           <!-- Icon -->
-          <div class="w-11 h-11 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand-light mb-5 group-hover:bg-brand/15 group-hover:border-brand/30 transition-all duration-300">
+          <div class="w-11 h-11 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate-300 mb-5 group-hover:bg-white/[0.08] group-hover:border-white/[0.14] transition-all duration-300">
             <Fragment set:html={icons[item.icon] || icons.support} />
           </div>
 

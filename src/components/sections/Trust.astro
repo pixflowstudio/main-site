@@ -66,7 +66,7 @@ const icons: Record<string, string> = {
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-20">
       {trust.features.map((feature) => (
         <div class="card card-hover flex gap-4">
-          <div class="w-10 h-10 rounded-lg bg-brand/10 border border-brand/20 flex items-center justify-center text-brand-light flex-shrink-0 mt-0.5">
+          <div class="w-10 h-10 rounded-lg bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate-300 flex-shrink-0 mt-0.5">
             <Fragment set:html={icons[feature.icon] || icons.support} />
           </div>
           <div>
