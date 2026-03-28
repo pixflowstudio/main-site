@@ -70,7 +70,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #10B981 0%, #059669 50%, #34D399 100%);
+    background-image: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #FCD34D 100%);
   }
 
   .glow-brand {
