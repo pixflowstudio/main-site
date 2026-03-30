@@ -37,16 +37,16 @@ const alternateLang = lang === 'en' ? 'BG' : 'EN';
 
       <!-- Desktop navigation -->
       <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
-        <a href="#services" class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+        <a href={`${homeUrl}#services`} class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
           {nav.services}
         </a>
-        <a href="#pricing" class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+        <a href={`${homeUrl}#pricing`} class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
           {nav.pricing}
         </a>
-        <a href="#process" class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+        <a href={`${homeUrl}#process`} class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
           {nav.process}
         </a>
-        <a href="#contact" class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+        <a href={`${homeUrl}#contact`} class="px-3 py-2 text-slate-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
           {nav.contact}
         </a>
       </nav>
@@ -64,7 +64,7 @@ const alternateLang = lang === 'en' ? 'BG' : 'EN';
 
         <!-- CTA button (desktop) -->
         <a
-          href="#contact"
+          href={`${homeUrl}#contact`}
           class="hidden sm:inline-flex btn-primary text-sm px-4 py-2"
         >
           {nav.cta}
@@ -100,20 +100,20 @@ const alternateLang = lang === 'en' ? 'BG' : 'EN';
       class="md:hidden hidden border-t border-white/5 py-3 space-y-1"
       aria-label="Mobile navigation"
     >
-      <a href="#services" class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+      <a href={`${homeUrl}#services`} class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
         {nav.services}
       </a>
-      <a href="#pricing" class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+      <a href={`${homeUrl}#pricing`} class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
         {nav.pricing}
       </a>
-      <a href="#process" class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+      <a href={`${homeUrl}#process`} class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
         {nav.process}
       </a>
-      <a href="#contact" class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
+      <a href={`${homeUrl}#contact`} class="flex items-center px-3 py-2.5 text-slate-300 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-150">
         {nav.contact}
       </a>
       <div class="pt-2 pb-1">
-        <a href="#contact" class="btn-primary w-full text-sm py-2.5">
+        <a href={`${homeUrl}#contact`} class="btn-primary w-full text-sm py-2.5">
           {nav.cta}
         </a>
       </div>
