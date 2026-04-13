@@ -1,0 +1,48 @@
+# Pixflow Studio
+
+## What We Do
+Pixflow Studio designs, builds, and hosts modern websites for small local businesses. We offer a simple monthly subscription that covers everything — design, hosting, SSL, and support — with no large upfront cost.
+
+## Target Audience
+Small local businesses, solo entrepreneurs, and service providers (primarily in Bulgaria and the EU) who need a professional web presence without the complexity of managing it themselves.
+
+## Core Value Proposition
+- Websites go live within 48–72 hours of content approval
+- No upfront cost — one flat monthly fee
+- No technical knowledge required from the client
+- Mobile-first, SEO-ready, and fast by default
+
+## Services
+- Custom website design tailored to each business
+- Hosting and SSL certificate included
+- Mobile-friendly, responsive layouts
+- SEO-ready structure (proper meta tags, schema markup, sitemap)
+- Lightning-fast performance (static site infrastructure)
+- Ongoing support and content updates (depending on plan)
+
+## Pricing Plans
+- **Starter** — €24.99/month: Custom design, hosting, SSL, mobile-friendly, SEO-ready, up to 5 pages
+- **Growth** — €34.99/month: Everything in Starter + small content updates, text & image changes, priority email support, up to 7 pages
+- **Priority** — €49.99/month: Everything in Growth + up to 1hr updates/month, priority turnaround, up to 10 pages, performance monitoring, monthly check-in
+
+All plans include a one-time website setup. No contracts — cancel anytime.
+
+## Important URLs
+- Homepage (English): https://pixflowstudio.com/
+- Homepage (Bulgarian): https://pixflowstudio.com/bg/
+- Service Terms (English): https://pixflowstudio.com/service-terms/
+- Service Terms (Bulgarian): https://pixflowstudio.com/bg/service-terms/
+- Privacy Policy (English): https://pixflowstudio.com/privacy/
+- Privacy Policy (Bulgarian): https://pixflowstudio.com/bg/privacy/
+
+## Contact
+- Email: contact@pixflowstudio.com
+- WhatsApp: https://wa.me/359883303341
+
+## Languages
+The site is available in English and Bulgarian (България).
+
+## Business Details
+- Area served: Bulgaria, EU
+- Service type: Web Design & Development
+- Schema type: ProfessionalService
