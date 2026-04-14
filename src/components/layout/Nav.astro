@@ -26,13 +26,12 @@ const alternateLang = lang === 'en' ? 'BG' : 'EN';
     <div class="flex items-center justify-between h-16 sm:h-20">
 
       <!-- Logo -->
-      <a href={homeUrl} class="flex items-center gap-2.5 group" aria-label="Pixflow Studio – Home">
-        <div class="w-8 h-8 rounded-lg flex items-center justify-center text-white font-black text-xs tracking-tight flex-shrink-0 group-hover:scale-110 transition-transform duration-200" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%)">
-          PF
-        </div>
-        <span class="font-bold text-white text-sm tracking-tight hidden xs:block">
-          Pixflow<span class="text-brand-light"> Studio</span>
-        </span>
+      <a href={homeUrl} class="flex items-center group" aria-label="Pixflow Studio – Home">
+        <img
+          src="/logo.png"
+          alt="Pixflow Studio"
+          class="h-10 w-auto group-hover:scale-105 transition-transform duration-200" style="filter: drop-shadow(0 0 4px rgba(255,255,255,0.8)) drop-shadow(0 0 2px rgba(255,255,255,0.9))"
+        />
       </a>
 
       <!-- Desktop navigation -->

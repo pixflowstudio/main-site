@@ -6,7 +6,6 @@ export interface Props {
   title: string;
   description: string;
   lang: 'en' | 'bg';
-  canonicalUrl?: string;
   ogImage?: string;
 }
 
@@ -27,6 +26,52 @@ const alternateUrl = lang === 'en'
   : `${siteUrl}${pathname.replace(/^\/bg/, '') || '/'}`;
 const alternateLang = lang === 'en' ? 'bg' : 'en';
 const xDefaultUrl = lang === 'en' ? canonicalUrl : alternateUrl;
+
+const schemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pixflow Studio",
+    "url": siteUrl,
+    "logo": `${siteUrl}/logo.png`,
+    "email": "contact@pixflowstudio.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "contact@pixflowstudio.com",
+      "availableLanguage": ["English", "Bulgarian"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "Pixflow Studio",
+    "url": siteUrl,
+    "logo": `${siteUrl}/logo.png`,
+    "email": "contact@pixflowstudio.com",
+    "description": "We design, build, and host modern websites for small local businesses. Starting at €25/month. No contracts, no upfront cost.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Bulgaria"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BG"
+    },
+    "priceRange": "€25–€39/month",
+    "serviceType": "Web Design & Development",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Bank Transfer, Card"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Pixflow Studio",
+    "url": siteUrl,
+    "inLanguage": ["en", "bg"],
+    "description": description
+  }
+];
 ---
 
 <!DOCTYPE html>
@@ -63,17 +108,7 @@ const xDefaultUrl = lang === 'en' ? canonicalUrl : alternateUrl;
   <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
 
   <!-- Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Pixflow Studio",
-    "url": siteUrl,
-    "email": "contact@pixflowstudio.com",
-    "description": description,
-    "areaServed": "Bulgaria",
-    "priceRange": "€25-€39/month",
-    "serviceType": "Web Design & Development"
-  })} />
+  <script type="application/ld+json" set:html={JSON.stringify(schemas)} />
 
   <!-- Preconnect fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -83,6 +118,8 @@ const xDefaultUrl = lang === 'en' ? canonicalUrl : alternateUrl;
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="theme-color" content="#0A0B14" />
+
+  <slot name="head" />
 </head>
 <body class="bg-[#0A0B14] text-slate-100 antialiased font-sans">
   <slot />
