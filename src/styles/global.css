@@ -59,7 +59,7 @@
   }
 
   .card {
-    @apply bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 backdrop-blur-sm;
+    @apply bg-[#131520] border border-white/[0.06] rounded-2xl p-6;
   }
 
   .card-hover {

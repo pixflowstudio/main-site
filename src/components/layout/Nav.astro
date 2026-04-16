@@ -27,11 +27,14 @@ const alternateLang = lang === 'en' ? 'BG' : 'EN';
 
       <!-- Logo -->
       <a href={homeUrl} class="flex items-center group" aria-label="Pixflow Studio – Home">
-        <img
-          src="/logo.png"
-          alt="Pixflow Studio"
-          class="h-10 w-auto group-hover:scale-105 transition-transform duration-200" style="filter: drop-shadow(0 0 4px rgba(255,255,255,0.8)) drop-shadow(0 0 2px rgba(255,255,255,0.9))"
-        />
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img
+            src="/logo.png"
+            alt="Pixflow Studio"
+            class="h-10 w-auto group-hover:scale-105 transition-transform duration-200"
+          />
+        </picture>
       </a>
 
       <!-- Desktop navigation -->
@@ -130,15 +133,15 @@ const alternateLang = lang === 'en' ? 'BG' : 'EN';
   // Scroll: add background when scrolled
   const onScroll = () => {
     if (window.scrollY > 24) {
-      header?.classList.add('bg-[#0A0B14]/90', 'backdrop-blur-xl', 'border-b', 'border-white/[0.05]', 'shadow-xl', 'shadow-black/20');
+      header?.classList.add('bg-[#0A0B14]/95', 'border-b', 'border-white/[0.05]', 'shadow-lg', 'shadow-black/15');
     } else {
-      header?.classList.remove('bg-[#0A0B14]/90', 'backdrop-blur-xl', 'border-b', 'border-white/[0.05]', 'shadow-xl', 'shadow-black/20');
+      header?.classList.remove('bg-[#0A0B14]/95', 'border-b', 'border-white/[0.05]', 'shadow-lg', 'shadow-black/15');
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  const scrolledClasses = ['bg-[#0A0B14]/90', 'backdrop-blur-xl', 'border-b', 'border-white/[0.05]', 'shadow-xl', 'shadow-black/20'];
+  const scrolledClasses = ['bg-[#0A0B14]/95', 'border-b', 'border-white/[0.05]', 'shadow-lg', 'shadow-black/15'];
 
   function openMenu() {
     mobileMenu?.classList.remove('hidden');
