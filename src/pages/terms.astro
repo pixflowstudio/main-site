@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import company from '../content/en/company.json';
+import content from '../content/en/terms.json';
+
+const lang = 'en' as const;
+
+const icons: Record<string, string> = {
+  building: `<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>`,
+  layers: `<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>`,
+  card: `<rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/>`,
+  calendar: `<rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="10" y1="14" x2="8" y2="16"/><line x1="8" y1="16" x2="14" y2="16"/>`,
+  shield: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
+  refund: `<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.37"/>`,
+  refresh: `<path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>`,
+  mail: `<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>`,
+};
+---
+
+<BaseLayout
+  title="Terms & Conditions — Pixflow Studio"
+  description="Terms and conditions for Pixflow Studio subscription-based web design services. Please review before subscribing to any plan."
+  lang={lang}
+>
+  <Nav lang={lang} nav={company.nav} />
+
+  <main class="pt-24 sm:pt-28 pb-24 sm:pb-32 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Page header -->
+      <div class="max-w-3xl mb-12 pb-10 border-b border-white/[0.06]">
+        <a href="/" class="inline-flex items-center gap-2 text-slate-500 hover:text-white text-sm mb-8 transition-colors">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back to home
+        </a>
+        <h1 class="text-3xl sm:text-4xl font-black text-white mb-4 tracking-tight">{content.title}</h1>
+        <p class="text-slate-400 text-lg leading-relaxed mb-3">{content.subtitle}</p>
+        <p class="text-slate-600 text-sm">Last updated: {content.lastUpdated}</p>
+      </div>
+
+      <!-- Intro notice -->
+      <div class="max-w-3xl mb-12">
+        <div class="bg-brand/[0.08] border border-brand/25 rounded-2xl p-5 sm:p-6 flex gap-4">
+          <div class="flex-shrink-0 w-9 h-9 rounded-xl bg-brand/15 border border-brand/25 flex items-center justify-center text-brand-light">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold text-sm mb-1">{content.intro.title}</p>
+            <p class="text-slate-400 text-sm leading-relaxed">{content.intro.body}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-column layout: sticky TOC + content -->
+      <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-16">
+
+        <!-- Sticky TOC (desktop only) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-28">
+            <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Contents</p>
+            <nav aria-label="Table of contents">
+              <ol class="space-y-1">
+                {content.sections.map((section, i) => (
+                  <li>
+                    <a
+                      href={`#${section.id}`}
+                      class="flex items-center gap-2.5 text-sm text-slate-500 hover:text-white py-1.5 transition-colors duration-150 group"
+                    >
+                      <span class="text-xs font-mono text-slate-700 group-hover:text-brand-light transition-colors w-4 flex-shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span class="leading-tight">{section.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+            <div class="mt-8 pt-6 border-t border-white/[0.06]">
+              <a
+                href="mailto:contact@pixflowstudio.com"
+                class="inline-flex items-center gap-2 text-xs text-slate-500 hover:text-brand-light transition-colors"
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                Questions? Email us
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Sections -->
+        <div class="space-y-5">
+          {content.sections.map((section, i) => (
+            <div
+              id={section.id}
+              class="bg-[#131520] border border-white/[0.06] rounded-2xl p-6 sm:p-8 scroll-mt-28"
+            >
+              <!-- Section header -->
+              <div class="flex items-start gap-4 mb-5">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-brand-light">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icons[section.icon]} />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2.5 mb-0.5">
+                    <span class="text-xs font-mono text-slate-700">{String(i + 1).padStart(2, '0')}</span>
+                  </div>
+                  <h2 class="text-base sm:text-lg font-bold text-white leading-tight">{section.title}</h2>
+                </div>
+              </div>
+
+              <!-- Body text -->
+              {'body' in section && section.body && !('email' in section) && (
+                <p class="text-slate-400 text-sm leading-relaxed">{section.body}</p>
+              )}
+
+              <!-- Intro + list -->
+              {'intro' in section && section.intro && (
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">{section.intro}</p>
+              )}
+              {'items' in section && section.items && !('subsections' in section) && (
+                <ul class="space-y-2.5">
+                  {section.items.map((item) => (
+                    <li class="flex items-start gap-2.5 text-sm text-slate-300">
+                      <svg class="text-brand-light flex-shrink-0 mt-0.5" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {'note' in section && section.note && (
+                <p class="mt-4 pt-4 border-t border-white/[0.05] text-slate-500 text-sm italic">{section.note}</p>
+              )}
+
+              <!-- Subsections (Responsibilities) -->
+              {'subsections' in section && section.subsections && (
+                <div class="space-y-5">
+                  {section.subsections.map((sub) => (
+                    <div>
+                      <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">{sub.heading}</p>
+                      <ul class="space-y-2.5">
+                        {sub.items.map((item) => (
+                          <li class="flex items-start gap-2.5 text-sm text-slate-300">
+                            <svg class="text-brand-light flex-shrink-0 mt-0.5" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                              <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <!-- Contact section -->
+              {'email' in section && section.email && (
+                <div>
+                  <p class="text-slate-400 text-sm leading-relaxed mb-4">{section.body}</p>
+                  <a
+                    href={`mailto:${section.email}`}
+                    class="inline-flex items-center gap-2 text-brand-light hover:text-white text-sm font-medium transition-colors"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    {section.email}
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer
+    lang={lang}
+    footer={company.footer}
+    email={company.email}
+    whatsapp={company.whatsapp}
+  />
+</BaseLayout>

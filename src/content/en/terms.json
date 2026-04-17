@@ -1,0 +1,97 @@
+{
+  "title": "Terms & Conditions",
+  "subtitle": "Please read these terms carefully before subscribing to any Pixflow Studio plan.",
+  "lastUpdated": "April 2026",
+  "intro": {
+    "title": "Review before subscribing",
+    "body": "By subscribing to any Pixflow Studio plan, you agree to these Terms & Conditions. We recommend reviewing them fully before starting your subscription. If you have any questions, reach out at contact@pixflowstudio.com — we're happy to clarify anything."
+  },
+  "sections": [
+    {
+      "id": "general",
+      "icon": "building",
+      "title": "General Information",
+      "body": "Pixflow Studio provides subscription-based website design, development, hosting, maintenance, and related consulting services for small businesses. These Terms & Conditions govern the relationship between Pixflow Studio and any client who subscribes to our services."
+    },
+    {
+      "id": "services",
+      "icon": "layers",
+      "title": "Services",
+      "intro": "Depending on your chosen plan, services may include:",
+      "items": [
+        "Website design and development",
+        "Hosting and infrastructure management",
+        "Ongoing maintenance and updates",
+        "Content edits and copy updates",
+        "Technical support",
+        "Online presence consulting"
+      ],
+      "note": "Consulting is included within your monthly subscription and is not billed separately."
+    },
+    {
+      "id": "subscription",
+      "icon": "card",
+      "title": "Subscription & Payments",
+      "items": [
+        "Services are provided on a recurring monthly subscription basis.",
+        "Payments are processed securely through Stripe or another approved payment provider.",
+        "Clients may receive their subscription or payment link manually by email.",
+        "By subscribing to any plan, the client agrees to these Terms & Conditions.",
+        "Subscriptions renew automatically at the end of each billing cycle unless cancelled."
+      ]
+    },
+    {
+      "id": "cancellation",
+      "icon": "calendar",
+      "title": "Cancellation",
+      "items": [
+        "Clients may cancel at any time — no questions asked.",
+        "Cancellation takes effect at the end of the current billing cycle.",
+        "No long-term contract is required unless otherwise agreed in writing.",
+        "After cancellation, access to hosted services will end at the close of the paid period."
+      ]
+    },
+    {
+      "id": "responsibilities",
+      "icon": "shield",
+      "title": "Responsibilities",
+      "subsections": [
+        {
+          "heading": "Pixflow Studio will:",
+          "items": [
+            "Deliver services professionally and in good faith.",
+            "Maintain the agreed website and hosting for the duration of the subscription.",
+            "Communicate clearly and respond to requests within a reasonable timeframe."
+          ]
+        },
+        {
+          "heading": "The client is responsible for:",
+          "items": [
+            "All content, logos, text, images, branding assets, and other materials they provide.",
+            "Ensuring they have the legal right to use any submitted materials.",
+            "Keeping their contact and billing information up to date."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "refunds",
+      "icon": "refund",
+      "title": "Refund Policy",
+      "body": "Subscription payments are non-refundable once a billing period has started, unless required by applicable law. If you believe there has been an error with your billing, please contact us and we will review the situation fairly."
+    },
+    {
+      "id": "changes",
+      "icon": "refresh",
+      "title": "Changes to These Terms",
+      "body": "Pixflow Studio may update these Terms & Conditions at any time. When we do, the updated version will be published on this page with a revised date. Continued use of our services after changes are published constitutes acceptance of the updated terms. We recommend checking this page periodically."
+    },
+    {
+      "id": "contact",
+      "icon": "mail",
+      "title": "Contact",
+      "body": "If you have any questions about these Terms & Conditions or your subscription, please get in touch.",
+      "email": "contact@pixflowstudio.com"
+    }
+  ]
+}

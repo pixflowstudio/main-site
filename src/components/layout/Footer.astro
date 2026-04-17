@@ -126,10 +126,10 @@ const currentYear = new Date().getFullYear();
         <ul class="space-y-3" role="list">
           <li>
             <a
-              href={lang === 'en' ? '/service-terms/' : '/bg/service-terms/'}
+              href={lang === 'en' ? '/terms/' : '/bg/terms/'}
               class="text-slate-400 hover:text-white text-sm transition-colors duration-150"
             >
-              {lang === 'en' ? "What's Included" : 'Какво е включено'}
+              {lang === 'en' ? 'Terms & Conditions' : 'Общи условия'}
             </a>
           </li>
           <li>
@@ -138,6 +138,22 @@ const currentYear = new Date().getFullYear();
               class="text-slate-400 hover:text-white text-sm transition-colors duration-150"
             >
               {lang === 'en' ? 'Privacy Policy' : 'Поверителност'}
+            </a>
+          </li>
+          <li>
+            <a
+              href={lang === 'en' ? '/service-terms/' : '/bg/service-terms/'}
+              class="text-slate-400 hover:text-white text-sm transition-colors duration-150"
+            >
+              {lang === 'en' ? "What's Included" : 'Какво е включено'}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-slate-400 hover:text-white text-sm transition-colors duration-150"
+            >
+              {lang === 'en' ? 'Contact' : 'Контакт'}
             </a>
           </li>
         </ul>
