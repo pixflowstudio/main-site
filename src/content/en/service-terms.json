@@ -3,7 +3,7 @@
   "subtitle": "A clear breakdown of every plan — what you get, what counts as extra, and how requests work.",
   "plans": [
     {
-      "name": "Starter — €24.99/month",
+      "name": "Starter — €25/month",
       "color": "default",
       "includes": [
         "Custom website design built specifically for your business",
@@ -23,7 +23,7 @@
       "note": "This plan is designed for businesses that are happy with their site and only need it live and hosted. Any change after launch requires upgrading or paying for extra work."
     },
     {
-      "name": "Growth — €34.99/month",
+      "name": "Growth — €35/month",
       "color": "featured",
       "includes": [
         "Everything in Starter",
@@ -42,7 +42,7 @@
       "note": "This plan covers ongoing maintenance and minor updates to keep your site fresh. It does not cover development work."
     },
     {
-      "name": "Priority — €49.99/month",
+      "name": "Priority — €50/month",
       "color": "default",
       "includes": [
         "Everything in Growth",

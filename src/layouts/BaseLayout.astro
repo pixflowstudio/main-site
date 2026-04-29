@@ -7,6 +7,7 @@ export interface Props {
   description: string;
   lang: 'en' | 'bg';
   ogImage?: string;
+  schemaOverrides?: Record<string, unknown>[];
 }
 
 const {
@@ -14,9 +15,12 @@ const {
   description,
   lang,
   ogImage = '/logo.png',
+  schemaOverrides = [],
 } = Astro.props;
 
 const siteUrl = 'https://pixflowstudio.com';
+const locale = lang === 'en' ? 'en_US' : 'bg_BG';
+const alternateLocale = lang === 'en' ? 'bg_BG' : 'en_US';
 const pathname = Astro.url.pathname.endsWith('/')
   ? Astro.url.pathname
   : `${Astro.url.pathname}/`;
@@ -58,10 +62,37 @@ const schemas = [
       "@type": "PostalAddress",
       "addressCountry": "BG"
     },
-    "priceRange": "€25–€39/month",
+    "priceRange": "€25–€50/month",
     "serviceType": "Web Design & Development",
     "currenciesAccepted": "EUR",
-    "paymentAccepted": "Bank Transfer, Card"
+    "paymentAccepted": "Bank Transfer, Card",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Website subscription plans",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Starter website plan",
+          "price": "25",
+          "priceCurrency": "EUR",
+          "description": "Affordable small business website with design, hosting, SSL, and up to 5 pages."
+        },
+        {
+          "@type": "Offer",
+          "name": "Growth website plan",
+          "price": "35",
+          "priceCurrency": "EUR",
+          "description": "Website creation plan for growing businesses with content updates and priority support."
+        },
+        {
+          "@type": "Offer",
+          "name": "Priority website plan",
+          "price": "50",
+          "priceCurrency": "EUR",
+          "description": "Fast-launch website package with ongoing updates, monitoring, and monthly support."
+        }
+      ]
+    }
   },
   {
     "@context": "https://schema.org",
@@ -69,9 +100,17 @@ const schemas = [
     "name": "Pixflow Studio",
     "url": siteUrl,
     "inLanguage": ["en", "bg"],
-    "description": description
+    "description": description,
+    "about": [
+      "small business websites",
+      "affordable website design",
+      "website creation for new businesses",
+      "fast website setup",
+      "web design in Bulgaria"
+    ]
   }
 ];
+const structuredData = [...schemas, ...schemaOverrides];
 ---
 
 <!DOCTYPE html>
@@ -84,6 +123,7 @@ const schemas = [
   <!-- Primary Meta -->
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href={canonicalUrl} />
 
   <!-- Hreflang -->
@@ -94,6 +134,8 @@ const schemas = [
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Pixflow Studio" />
+  <meta property="og:locale" content={locale} />
+  <meta property="og:locale:alternate" content={alternateLocale} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
@@ -107,7 +149,7 @@ const schemas = [
   <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
 
   <!-- Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(schemas)} />
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />

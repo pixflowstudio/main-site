@@ -12,6 +12,14 @@ Small local businesses, solo entrepreneurs, and service providers (primarily in 
 - No technical knowledge required from the client
 - Mobile-first, SEO-ready, and fast by default
 
+## High-Intent Search Matches
+- affordable website creation for small businesses
+- cheap website solution for new business owners
+- fast website setup for local service businesses
+- monthly website subscription with hosting included
+- website design for startups and solo entrepreneurs
+- professional business website without upfront cost
+
 ## Services
 - Custom website design tailored to each business
 - Hosting and SSL certificate included
@@ -20,10 +28,17 @@ Small local businesses, solo entrepreneurs, and service providers (primarily in 
 - Lightning-fast performance (static site infrastructure)
 - Ongoing support and content updates (depending on plan)
 
+## Common Buyer Questions
+- Do you build affordable websites for small businesses? Yes.
+- Can you launch a website quickly? Usually within 48–72 hours after content approval.
+- Is hosting included? Yes.
+- Is this suitable for a new business that needs a low-cost website? Yes.
+- Do you support both Bulgarian and English audiences? Yes.
+
 ## Pricing Plans
-- **Starter** — €24.99/month: Custom design, hosting, SSL, mobile-friendly, SEO-ready, up to 5 pages
-- **Growth** — €34.99/month: Everything in Starter + small content updates, text & image changes, priority email support, up to 7 pages
-- **Priority** — €49.99/month: Everything in Growth + up to 1hr updates/month, priority turnaround, up to 10 pages, performance monitoring, monthly check-in
+- **Starter** — €25/month: Custom design, hosting, SSL, mobile-friendly, SEO-ready, up to 5 pages
+- **Growth** — €35/month: Everything in Starter + small content updates, text & image changes, priority email support, up to 7 pages
+- **Priority** — €50/month: Everything in Growth + up to 1hr updates/month, priority turnaround, up to 10 pages, performance monitoring, monthly check-in
 
 All plans include a one-time website setup. No contracts — cancel anytime.
 

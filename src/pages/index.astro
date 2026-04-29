@@ -8,6 +8,7 @@ import Pricing from '../components/sections/Pricing.astro';
 import Process from '../components/sections/Process.astro';
 import Trust from '../components/sections/Trust.astro';
 import Contact from '../components/sections/Contact.astro';
+import FAQ from '../components/sections/FAQ.astro';
 
 // Content imports
 import company from '../content/en/company.json';
@@ -16,14 +17,28 @@ import pricing from '../content/en/pricing.json';
 import process from '../content/en/process.json';
 import trust from '../content/en/trust.json';
 import contact from '../content/en/contact.json';
+import faq from '../content/en/faq.json';
 
 const lang = 'en' as const;
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.items.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
 ---
 
 <BaseLayout
-  title="Pixflow Studio — Professional Websites from €25/month"
-  description="We design, build, and host modern websites for small local businesses. Starting at €25/month. No contracts, no upfront cost, live in 48 hours."
+  title="Affordable Small Business Website Creation | Pixflow Studio"
+  description="Affordable website creation for small businesses, startups, and local services. Fast website setup, hosting included, and launch in 48-72 hours from €25/month."
   lang={lang}
+  schemaOverrides={[faqSchema]}
 >
   <Nav lang={lang} nav={company.nav} />
 
@@ -33,6 +48,7 @@ const lang = 'en' as const;
     <Pricing pricing={pricing} />
     <Process process={process} />
     <Trust trust={trust} />
+    <FAQ faq={faq} />
     <Contact contact={contact} lang={lang} />
   </main>
 

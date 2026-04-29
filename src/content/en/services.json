@@ -1,32 +1,32 @@
 {
   "badge": "What you get",
-  "headline": "Everything your business needs online",
-  "subheadline": "One simple subscription covers everything — from design to hosting.",
+  "headline": "Everything your business needs to launch a website fast",
+  "subheadline": "One simple subscription covers website design, setup, hosting, SEO foundations, and support for small businesses that want to get online quickly.",
   "items": [
     {
       "icon": "design",
       "title": "Custom Website Design",
-      "description": "A unique, modern website designed specifically for your business and brand identity."
+      "description": "A unique, modern business website designed around your service, offers, and brand identity."
     },
     {
       "icon": "hosting",
       "title": "Hosting Included",
-      "description": "Your site lives on fast, reliable infrastructure. No extra costs, no server management."
+      "description": "Your website runs on fast, reliable infrastructure with no extra hosting cost and no server management."
     },
     {
       "icon": "mobile",
       "title": "Mobile-First",
-      "description": "Your website looks perfect on every device — phone, tablet, or desktop."
+      "description": "Your small business website looks polished on phone, tablet, and desktop from day one."
     },
     {
       "icon": "seo",
       "title": "SEO-Ready",
-      "description": "Built with proper structure so search engines can find your business from day one."
+      "description": "Built with the structure, metadata, and crawl signals needed for Google and AI search tools to understand your business."
     },
     {
       "icon": "fast",
       "title": "Lightning Fast",
-      "description": "Optimized for speed. Fast websites rank better and convert more visitors into customers."
+      "description": "Optimized for speed because fast-loading websites earn more trust, rank better, and convert more visitors."
     },
     {
       "icon": "support",

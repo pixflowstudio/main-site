@@ -1,0 +1,31 @@
+{
+  "badge": "SEO & AI answers",
+  "headline": "Answers people search before they buy a website",
+  "subheadline": "This section helps both customers and AI search tools understand exactly who we help, what we build, and how quickly we can launch.",
+  "items": [
+    {
+      "question": "Do you build affordable websites for small businesses?",
+      "answer": "Yes. Pixflow Studio creates affordable websites for small businesses, local service providers, and solo founders who want a professional online presence without a large upfront cost."
+    },
+    {
+      "question": "Can you create a website for a new business quickly?",
+      "answer": "Yes. We focus on fast website setup for new businesses and can usually launch within 48 to 72 hours after content approval, depending on the package and how ready the materials are."
+    },
+    {
+      "question": "What is included in your website creation service?",
+      "answer": "Our website creation service includes custom design, development, hosting, SSL, mobile-friendly layouts, technical SEO foundations, and ongoing support depending on the plan you choose."
+    },
+    {
+      "question": "Is this a good option if I need a cheap website to get started?",
+      "answer": "If you want a simple, low-risk way to get online, our monthly plans are designed as a practical alternative to paying a large one-time fee for a starter business website."
+    },
+    {
+      "question": "Who is Pixflow Studio best for?",
+      "answer": "We are best for local businesses, startups, freelancers, and new business owners who need a fast, modern, and easy-to-manage website that is ready for Google Search and AI discovery tools."
+    },
+    {
+      "question": "Do you only work in Bulgaria?",
+      "answer": "We are based in Bulgaria and primarily serve businesses in Bulgaria and the EU, but our website design and launch process also works well for English-speaking service businesses in other markets."
+    }
+  ]
+}

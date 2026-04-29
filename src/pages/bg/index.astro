@@ -8,6 +8,7 @@ import Pricing from '../../components/sections/Pricing.astro';
 import Process from '../../components/sections/Process.astro';
 import Trust from '../../components/sections/Trust.astro';
 import Contact from '../../components/sections/Contact.astro';
+import FAQ from '../../components/sections/FAQ.astro';
 
 // Content imports
 import company from '../../content/bg/company.json';
@@ -16,14 +17,28 @@ import pricing from '../../content/bg/pricing.json';
 import process from '../../content/bg/process.json';
 import trust from '../../content/bg/trust.json';
 import contact from '../../content/bg/contact.json';
+import faq from '../../content/bg/faq.json';
 
 const lang = 'bg' as const;
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.items.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
 ---
 
 <BaseLayout
-  title="Pixflow Studio — Професионални уебсайтове от 25€/месец"
-  description="Проектираме, изграждаме и хостваме модерни уебсайтове за малки местни бизнеси. От 25€ на месец. Без договори, без начална инвестиция, онлайн за 48 часа."
+  title="Достъпна Изработка на Сайт за Бизнес | Pixflow Studio"
+  description="Достъпна изработка на сайт за малък бизнес, стартъпи и местни услуги. Бърз старт, включен хостинг и пускане до 48-72 часа от €25/месец."
   lang={lang}
+  schemaOverrides={[faqSchema]}
 >
   <Nav lang={lang} nav={company.nav} />
 
@@ -33,6 +48,7 @@ const lang = 'bg' as const;
     <Pricing pricing={pricing} />
     <Process process={process} />
     <Trust trust={trust} />
+    <FAQ faq={faq} />
     <Contact contact={contact} lang={lang} />
   </main>
 
